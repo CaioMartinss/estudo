@@ -145,6 +145,24 @@ namespace livrocsharp
             string[] fruitas = { "maça", "pera", "abacate" };
 
             WriteLine($"fruta na posição 2: {fruitas[3 - 1]}");
+
+            WriteLine("==========================");
+            WriteLine("LIST: têm a finalidade de armazenar um tipo de dados no sistema" +
+                "Esses tipos de dados comumente são denominados\r\ncomo listas tipadas" +
+                "Ao se referir a “tipadas”, estamos meramente informando ou entendendo que ao criar uma lista com um tipo de dados");
+
+            List<string>  nomes_funcionarios =  new List<string>();
+
+            nomes_funcionarios.Add("Caio Martins");
+            nomes_funcionarios.Add("Rafael");
+
+            foreach(string funcionarios in nomes_funcionarios)
+            {
+               
+                /*WriteLine(funcionarios);*/
+            }
+            nomes_funcionarios.RemoveAt(0);
+            WriteLine(nomes_funcionarios[0]);
         }
 
 
