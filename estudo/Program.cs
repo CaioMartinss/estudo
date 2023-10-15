@@ -32,6 +32,7 @@ namespace livrocsharp
             WriteLine($"Converet para minisculo: {empresa.ToLower()}");
 
 
+            WriteLine("==========================");
             string nomeUpper = "AIRTON SENNA";
             string nomeLower = "airton senna";
             // comparação 1
@@ -78,8 +79,72 @@ namespace livrocsharp
             WriteLine("Nome da empresa atual: " + empresa);
             string nova_empresa = empresa.Replace("Microsoft", "Google");
             WriteLine($"nome da nova empresa: {nova_empresa}");
-           
 
+            WriteLine("Split - recebe um arra, e partir de uma 'chave' este array é dividido em vario outros");
+
+            WriteLine("==========================");
+            string blocos = "este é um livro de c# para iniciantes";
+            string[] livros = blocos.Split(" ");
+            var contador = 0;
+
+            foreach(var exp in livros)
+            {
+                WriteLine($"Textos: {contador++}: {exp}");
+            }
+
+            WriteLine($"número de palavras: {blocos.Count()}");
+
+
+            WriteLine("==========================");
+            WriteLine("O Método é substring é usado para extrair partes de um texto a partir de uma posição inicial");
+            string nivel_livro = "livro inicial para estudantes";
+            WriteLine($"{nivel_livro.Substring(0,5)}");
+
+            string[] frutas = { "5 Laranjas", "10 Goiabas vermelhas", "5 Pêssegos doces", "5 Bananas"};
+
+            foreach (var item in frutas)
+            {
+                WriteLine($"{item.Substring(item.IndexOf("") + 1)}");
+            }
+
+            WriteLine("==========================");
+            WriteLine("O Método ISNULLOREMPTY verifica se uma String está nula ou vazia");
+
+            string nome = "Renato";
+            string sobrenome = null;
+
+            if(!String.IsNullOrEmpty(nome) && !String.IsNullOrEmpty(sobrenome))
+            {
+                WriteLine($"NOME: {nome}");
+                WriteLine($"SOBRENOME: {sobrenome}");
+            }
+            else
+            {
+                WriteLine($"NOME: {nome}");
+            }
+
+            WriteLine("==========================");
+            WriteLine("FORMAS DE DECLARAR UM ARRAY");
+
+            /*Declarando uma array com
+            cinco elementos do tipo inteiro*/
+            int[] primeiraArray = new int[100];
+
+            /*Declarando uma array e já atribuindo valores*/
+            int[] segundaArray = new int[] { 1, 3, 5, 7, 9 };
+
+            //Forma alternativa de criar array
+            int[] terceiraArray = { 1, 2, 3, 4, 5, 6 };
+
+            // Declarando uma array multi-demensional
+            int[,] arrayMultiDimensional = new int[2, 3];
+
+            /*[,] arrayMultiDimensional2 = { { 1, 2, 3 }, { 4, 5, 6 } };*/
+
+            WriteLine("ACESSANDO UM ARRAY: ");
+            string[] fruitas = { "maça", "pera", "abacate" };
+
+            WriteLine($"fruta na posição 2: {fruitas[3 - 1]}");
         }
 
 
